@@ -8,7 +8,6 @@ COPY /source/nginx.conf /etc/nginx/nginx.conf
 COPY /source/index.html /usr/share/nginx/html/index.html
 COPY /source/*.html /usr/share/nginx/html/
 COPY /source/*.png /usr/share/nginx/html/
-# COPY /source/*.jpg /usr/share/nginx/html/
 
 # 컨테이너가 사용하는 포트 번호 80를 공개, 실제포트를 여는 것은 아니므로 실행에 영향을 주지 않음
 EXPOSE 80
