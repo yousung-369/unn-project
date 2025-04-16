@@ -10,7 +10,7 @@ COPY /source/*.html /usr/share/nginx/html/
 COPY /source/*.png /usr/share/nginx/html/
 # COPY /source/*.jpg /usr/share/nginx/html/
 
-# Expose port 80 //컨테이너가 사용하는 포트번호(80)를 공개, 공개하지 않아도 실행에 지장은 없음
+# Expose port 80 //컨테이너가 사용하는 포트번호(80)를 공개
 EXPOSE 80
 
 # Start Nginx when the container runs
