@@ -1,10 +1,10 @@
-# Use the official Nginx base image
+# 가장 최신 버전의 Nginx 이미지를 사용
 FROM nginx:latest
 
-# Copy custom configuration file to the container
+# 로컬 경로 /source/nginx.conf 파일을 컨테이너의 Nginx 설정 경로에 복사
 COPY /source/nginx.conf /etc/nginx/nginx.conf
 
-# Copy custom index.html file to the container
+# Nginx의 /source/index.html 파일을 /usr/share/nginx/html/index.html 에 복사
 COPY /source/index.html /usr/share/nginx/html/index.html
 COPY /source/*.html /usr/share/nginx/html/
 COPY /source/*.png /usr/share/nginx/html/
@@ -13,5 +13,5 @@ COPY /source/*.png /usr/share/nginx/html/
 # Expose port 80 //컨테이너가 사용하는 포트번호(80)를 공개
 EXPOSE 80
 
-# Start Nginx when the container runs
+# 컨테이너가 실행될 때 Nginx를 포그라운드 모드로 실행, daemon off를 써서 백그라운드 모드로 실행되지 않게 함
 CMD ["nginx", "-g", "daemon off;"]
