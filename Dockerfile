@@ -1,4 +1,4 @@
-# 가장 최신 버전의 Nginx 이미지를 사용
+# 가장 최신 버전의 Nginx 이미지 사용
 FROM nginx:latest
 
 # 로컬 경로 /source/nginx.conf 파일을 컨테이너의 Nginx 설정 경로에 복사
